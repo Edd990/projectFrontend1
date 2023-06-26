@@ -3,9 +3,445 @@
 <head>
     <meta charset="UTF-8" />
     <title>title</title>
+    
+    <style>
+        body, html {
+             margin: 0;
+             background: #889aa8;
+             height: 98vh;
+             font-family: sans-serif;
+        }
+         article {
+             width: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-wrap: wrap;
+             overflow: hidden;
+             min-height: 80vh;
+        }
+         article .container {
+             width: 320px;
+             height: 480px;
+             background: #f3f3f3;
+             box-shadow: 8px 8px 2px rgba(100, 112, 124, 0.5);
+        }
+         article span {
+             display: block;
+        }
+         article .one {
+             float: left;
+             margin: 20px;
+             background: #fdfffe;
+             overflow: hidden;
+             position: relative;
+        }
+         article .one .circle_a {
+             width: 180px;
+             height: 180px;
+             border-radius: 100%;
+             border: 3px solid #e82928;
+             background: transparent;
+             position: absolute;
+             top: -70px;
+             left: -70px;
+             z-index: 99;
+             animation: circle_rotate linear 8s infinite;
+        }
+         @-webkit-keyframes circle_rotate {
+             0% {
+                 transform: rotate(0deg);
+            }
+             100% {
+                 transform: rotate(360deg);
+            }
+        }
+         article .one .circle_a::after {
+             content: '';
+             width: 18px;
+             height: 18px;
+             border-radius: 100%;
+             display: block;
+             border: 4px solid #bdb2b8;
+             position: absolute;
+             top: 81px;
+             right: -14px;
+        }
+         article .one .red_dot {
+             width: 8px;
+             height: 8px;
+             border-radius: 100%;
+             background: #e82928;
+             position: absolute;
+             top: 27px;
+             right: 85px;
+        }
+         article .one .line_a {
+             background: #f2f2f2;
+             height: 30px;
+        }
+         article .one .line_b {
+             background: #f2f2f2;
+             background-image: linear-gradient(#f2f2f2 25px, #d1d1d1);
+             height: 30px;
+             margin: 2px 0 10px 0;
+        }
+         article .one .line_c {
+             background-image: linear-gradient(-45deg, #e5e5e5, #e5e5e5 2px, #fff 3px, #fff 6px);
+             background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 2px, #fff 3px, #fff 6px);
+             height: 150px;
+             position: relative;
+             box-shadow: inset 0px -50px 50px -20px rgba(0, 0, 0, 0.1);
+             border-top: 6px solid #43e0f6;
+             border-bottom: 10px solid #36455d;
+        }
+         article .one .line_c::after {
+             content: '';
+             display: block;
+             background: #adadad;
+             width: 160px;
+             height: 8px;
+             position: absolute;
+             right: 0;
+             top: 6px;
+        }
+         article .one .line_d {
+             background: #4f628e;
+             height: 10px;
+             position: relative;
+        }
+         article .one .line_d::after {
+             content: '';
+             width: 80px;
+             height: 80px;
+             border-radius: 100%;
+             border: 3px solid #b8b8b3;
+             display: block;
+             position: absolute;
+             z-index: 99;
+             right: -40px;
+             top: -43px;
+        }
+         article .one .line_e {
+             background: #4f628e;
+             height: 70px;
+             margin-top: 6px;
+             background-image: linear-gradient(#f2f2f2, #eff2f1);
+             position: relative;
+        }
+         article .one .line_e::before {
+             content: '';
+             display: block;
+             background: #ffaf00;
+             width: 100%;
+             height: 3px;
+             position: absolute;
+             bottom: 12px;
+        }
+         article .one .line_e::after {
+             content: '';
+             display: block;
+             background: #cecece;
+             width: 14px;
+             height: 14px;
+             border-radius: 100%;
+             position: absolute;
+             bottom: 6px;
+             animation: circle_slide ease-in-out 8s infinite;
+        }
+         @-webkit-keyframes circle_slide {
+             0% {
+                 left: 0px;
+            }
+             50% {
+                 left: 120px;
+            }
+             100% {
+                 left: 0px;
+            }
+        }
+         article .one .line_f {
+             background: #42e1f3;
+             height: 30px;
+             margin-bottom: 20px;
+             position: relative;
+        }
+         article .one .line_f::after {
+             content: '';
+             display: block;
+             width: 20px;
+             height: 20px;
+             border-radius: 100%;
+             background: #273c59;
+             position: absolute;
+             right: 40px;
+             bottom: -10px;
+             animation: circle_slide_right ease-in-out 7.8s infinite;
+        }
+         @-webkit-keyframes circle_slide_right {
+             0% {
+                 right: 0px;
+            }
+             50% {
+                 right: 60px;
+            }
+             100% {
+                 right: 0px;
+            }
+        }
+         article .one .line_g {
+             background: #fff;
+             background-image: linear-gradient(#d8d8d8 1px, #fefefe 10px);
+             height: 36px;
+             border-bottom: 4px solid #b0b0b0;
+             position: relative;
+        }
+         article .one .line_g::after {
+             content: '';
+             display: block;
+             position: absolute;
+             width: 50px;
+             height: 18px;
+             background: #c7c7c7;
+             top: 9px;
+        }
+         article .one .line_h {
+             background: #fff;
+             background-image: linear-gradient(-170deg, #d8d8d8 1%, #fefefe 50%);
+             height: 50px;
+             margin-top: 10px;
+        }
+         article .two {
+             float: left;
+             margin: 20px;
+             overflow: hidden;
+             background: #fdfdfd;
+             position: relative;
+        }
+         article .two .circle_d {
+             width: 50px;
+             height: 50px;
+             border-radius: 100%;
+             background: #52658d;
+             position: absolute;
+             left: 160px;
+             top: -20px;
+             box-shadow: -8px 10px 18px rgba(0, 0, 0, 0.2);
+        }
+         article .two .circle_b {
+             width: 54px;
+             height: 54px;
+             border-radius: 100%;
+             border: 6px solid #b1b1b1;
+             position: relative;
+             top: 10px;
+             left: 10px;
+             z-index: 99;
+        }
+         article .two .circle_b::after {
+             content: '';
+             display: block;
+             width: 130px;
+             height: 130px;
+             border-radius: 100%;
+             border: 4px solid #434542;
+             position: absolute;
+             top: -43px;
+             left: -43px;
+        }
+         article .two .circle_c {
+             width: 190px;
+             height: 190px;
+             border-radius: 100%;
+             background: #f3f3f3;
+             position: absolute;
+             left: -110px;
+             top: 15px;
+        }
+         article .two .circle_e {
+             width: 310px;
+             height: 310px;
+             border-radius: 100%;
+             display: block;
+             background: #f04043;
+             z-index: 2;
+             position: relative;
+             top: 60px;
+             left: 75px;
+             z-index: 98;
+        }
+         article .two .circle_e::before {
+             content: '';
+             display: block;
+             width: 120px;
+             height: 120px;
+             border-radius: 100%;
+             background: transparent;
+             border: 4px solid #50524f;
+             position: absolute;
+             top: 95px;
+             left: 95px;
+             z-index: 99;
+        }
+         article .two .circle_e::after {
+             content: '';
+             display: block;
+             width: 200px;
+             height: 200px;
+             border-radius: 100%;
+             background-image: linear-gradient(-45deg, #e5e5e5, #e5e5e5 2px, #fff 3px, #fff 6px);
+             background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 2px, #fff 3px, #fff 6px);
+             border: 7px solid #302727;
+             position: absolute;
+             top: 50px;
+             left: 50px;
+        }
+         article .two .circle_f {
+             width: 96px;
+             height: 96px;
+             border-radius: 100%;
+             background: #fff;
+             position: absolute;
+             z-index: 99;
+             top: 235px;
+             right: 37px;
+        }
+         article .two .circle_orbit {
+             width: 370px;
+             height: 370px;
+             border: 5px solid #bdbdbd;
+             border-radius: 100%;
+             position: absolute;
+             top: 90px;
+             left: 40px;
+             z-index: 99;
+             animation: circle_rotate linear 20s infinite;
+        }
+         article .two .circle_orbit .circle_orbit_b {
+             width: 84px;
+             height: 84px;
+             border-radius: 100%;
+             background: #f3f3f3;
+             position: absolute;
+             bottom: 8px;
+             left: 15px;
+             box-shadow: -5px 15px 20px rgba(0, 0, 0, 0.2);
+        }
+         article .two .circle_orbit .circle_orbit_b::after {
+             content: '';
+             display: block;
+             left: 25x;
+             width: 30px;
+             height: 30px;
+             border-radius: 100%;
+             background: #273c59;
+             position: absolute;
+             left: 27px;
+             bottom: 27px;
+             z-index: 99;
+        }
+         article .two .circle_g {
+             width: 5px;
+             height: 5px;
+             border-radius: 100%;
+             background: #fec805;
+             position: absolute;
+             right: 55px;
+             top: 160px;
+             z-index: 99;
+        }
+         article .two .circle_h {
+             width: 5px;
+             height: 5px;
+             border-radius: 100%;
+             background: #fffffd;
+             position: absolute;
+             left: 100px;
+             bottom: 150px;
+             z-index: 99;
+        }
+         article .two .circle_i {
+             width: 10px;
+             height: 10px;
+             border-radius: 100%;
+             background: #373737;
+             position: absolute;
+             left: 25px;
+             bottom: 55px;
+        }
+         article .two .rect_a {
+             width: 16px;
+             height: 3px;
+             background: #f5323a;
+             position: absolute;
+             top: 50px;
+             left: 30px;
+             z-index: 99;
+             transform: rotate(45deg);
+             animation: circle_rotate linear 15s infinite;
+        }
+         article .two .rect_b {
+             width: 30px;
+             height: 3px;
+             background: #0f46a3;
+             position: absolute;
+             top: 230px;
+             left: 5px;
+             z-index: 99;
+             transform: rotate(-40deg);
+        }
+         article .three {
+             float: left;
+             margin: 20px;
+        }
+         p {
+             color: #e9e9e9;
+             font-size: 0.8rem;
+             text-align: center;
+             margin: 20px 0;
+        }
+
+    </style>
+    
 </head>
 <body>
     <h1>Welcome to my world!</h1>
     <h3>Explore more.</h3>
+    <br>
+    
+    <article>
+
+      <section class="container one">
+        <span class="circle_a"></span>
+        <span class="red_dot"></span>
+        <span class="line_a"></span>
+        <span class="line_b"></span>
+        <span class="line_c"></span>
+        <span class="line_d"></span>
+        <span class="line_e"></span>
+        <span class="line_f"></span>
+        <span class="line_g"></span>
+        <span class="line_h"></span>
+      </section>
+
+      <section class="container two">
+        <span class="circle_d"></span>
+        <span class="circle_b"></span>
+        <span class="circle_c"></span>
+        <span class="circle_e"></span>
+        <span class="circle_f"></span>
+        <div class="circle_orbit">
+          <span class="circle_orbit_b"></span>
+        </div>
+        <span class="circle_g"></span>
+        <span class="circle_h"></span>
+        <span class="circle_i"></span>
+        <span class="rect_a"></span>
+        <span class="rect_b"></span>
+
+      </section>
+
+    </article>
+    
 </body>
 </html>
