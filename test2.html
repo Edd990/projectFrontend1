@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    
+    <style>
+        body, html {
+             margin: 0;
+             background: #889aa8;
+             height: 98vh;
+             font-family: sans-serif;
+        }
+        
+        /*Test bouncing ball effects*/
+        .pd-info-ball-1 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: -20%;
+            left: 40%;
+            animation-name: floating-ball-1;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: floating-ball-1;
+            -webkit-animation-duration: 20s;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: floating-ball-1;
+            -moz-animation-duration: 20s;
+            -moz-animation-iteration-count: infinite;
+        }
+        .pd-info-ball-2 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            /* bottom: -13%; */
+            right: -6%;
+            bottom: 80px;
+            animation-name: floating-ball-2;
+            animation-duration: 16s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: floating-ball-2;
+            -webkit-animation-duration: 16ss;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: floating-ball-2;
+            -moz-animation-duration: 16s;
+            -moz-animation-iteration-count: infinite;
+        }
+        .pd-info-ball-3 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            /* top: 50%; */
+            left: -4%;
+            bottom: 230px;
+            animation-name: floating-ball-3;
+            animation-duration: 34s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: floating-ball-3;
+            -webkit-animation-duration: 34s;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: floating-ball-3;
+            -moz-animation-duration: 34s;
+            -moz-animation-iteration-count: infinite;
+        }
+        .pd-info-ball-4 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 6%;
+            right: -8%;
+            animation-name: floating-ball-4;
+            animation-duration: 13s;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: floating-ball-4;
+            -webkit-animation-duration: 13s;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-name: floating-ball-4;
+            -moz-animation-duration: 13s;
+            -moz-animation-iteration-count: infinite;
+        }
+        @media screen and (max-width: 991px) {
+            .blue-contain,
+            .red-contain {
+                position: relative;
+                z-index: 9;
+            }
+            .pd-info-ball-1 {
+                top: -9%;
+                left: -7%;
+            }
+            .pd-info-ball-2 {
+                bottom: -3%;
+                right: -16%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .pd-info-ball-1 {
+                top: -9%;
+                left: -25%;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            .pd-info-ball-1 {
+                top: -4%;
+                left: -15%;
+                width: 40%;
+            }
+            .pd-info-ball-2 {
+                width: 80%;
+            }
+            .pd-info-ball-3 {
+                width: 90%;
+                left: -38%;
+            }
+        }
+        @keyframes floating-ball-1 {
+            0% {
+                transform: translateY(10%);
+            }
+            25% {
+                transform: translateY(-10%);
+            }
+            50% {
+                transform: translateY(10%);
+            }
+            75% {
+                transform: translateY(-10%);
+            }
+            100% {
+                transform: translateY(10%);
+            }
+        }
+        @-webkit-keyframes floating-ball-1 {
+            0% {
+                transform: translateY(10%);
+            }
+            25% {
+                transform: translateY(-10%);
+            }
+            50% {
+                transform: translateY(10%);
+            }
+            75% {
+                transform: translateY(-10%);
+            }
+            100% {
+                transform: translateY(10%);
+            }
+        }
+        @-moz-keyframes floating-ball-1 {
+            0% {
+                transform: translateY(10%);
+            }
+            25% {
+                transform: translateY(-10%);
+            }
+            50% {
+                transform: translateY(10%);
+            }
+            75% {
+                transform: translateY(-10%);
+            }
+            100% {
+                transform: translateY(10%);
+            }
+        }
+        @keyframes floating-ball-2 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        @-webkit-keyframes floating-ball-2 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        @-moz-keyframes floating-ball-2 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        @keyframes floating-ball-3 {
+            0% {
+                transform: translateY(-16%);
+            }
+            25% {
+                transform: translateY(16%);
+            }
+            50% {
+                transform: translateY(-16%);
+            }
+            75% {
+                transform: translateY(16%);
+            }
+            100% {
+                transform: translateY(-16%);
+            }
+        }
+        @-webkit-keyframes floating-ball-3 {
+            0% {
+                transform: translateY(-16%);
+            }
+            25% {
+                transform: translateY(16%);
+            }
+            50% {
+                transform: translateY(-16%);
+            }
+            75% {
+                transform: translateY(16%);
+            }
+            100% {
+                transform: translateY(-16%);
+            }
+        }
+        @-moz-keyframes floating-ball-3 {
+            0% {
+                transform: translateY(-16%);
+            }
+            25% {
+                transform: translateY(16%);
+            }
+            50% {
+                transform: translateY(-16%);
+            }
+            75% {
+                transform: translateY(16%);
+            }
+            100% {
+                transform: translateY(-16%);
+            }
+        }
+        @keyframes floating-ball-4 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        @-webkit-keyframes floating-ball-4 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        @-moz-keyframes floating-ball-4 {
+            0% {
+                transform: translateY(-8%);
+            }
+            25% {
+                transform: translateY(8%);
+            }
+            50% {
+                transform: translateY(-8%);
+            }
+            75% {
+                transform: translateY(8%);
+            }
+            100% {
+                transform: translateY(-8%);
+            }
+        }
+        
+        .pd-info {
+            background-image: linear-gradient(#e2f6fe, #fde1e1);
+            /* background-image: url(../images/emsculpt-neo/phase-1/info-bg.jpg); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            padding-bottom: 150%;
+            overflow: hidden;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to my world!</h1>
+    <h3>Explore more.</h3>
+    <br>
+    
+    <!--Test bouncing ball effects-->
+    <div class="neo-sec-content pd-info fromScroll fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="pd-info-ball-1"><img src="images/blue_ball_1.png"></div>
+        <div class="pd-info-ball-2"><img src="images/blue_ball_2.png"></div>
+        <div class="pd-info-ball-3"><img src="images/white_ball_1.png"></div>
+        <div class="pd-info-ball-4"><img src="images/white_ball_2.png"></div>
+    </div>
+    
+</body>
+</html>
