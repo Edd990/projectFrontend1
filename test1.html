@@ -733,6 +733,56 @@
             overflow: hidden;
         }
         
+        
+        /**************************************************/
+        /* Shining Effect (Custom Background Color) */
+        /**************************************************/
+        .bg-shining {
+            /* background-color: #eba3b1; */
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-shining::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            width: 60px;
+            height: 100%;
+            top: 0;
+            filter: blur(50px);
+            animation: ShiningBackground 4s ease infinite;
+
+        }
+        .bg-shining::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            width: 30px;
+            height: 100%;
+            top: 0;
+            filter: blur(5px);
+            animation: ShiningBackground 4s ease infinite;
+        }
+        @keyframes ShiningBackground {
+            0% {
+                transform: translateX(-100px) skewX(-15deg);
+            }
+            100% {
+                transform: translateX(600px) skewX(-15deg);
+            }
+        }
+        
+        .bg-shining.pad_xs_m_y {
+            width: 200px;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #af924f;
+        }
+        
+        
     </style>
     
 </head>
@@ -783,6 +833,15 @@
         <div class="pd-info-ball-3"><img src="images/white_ball_1.png"></div>
         <div class="pd-info-ball-4"><img src="images/white_ball_2.png"></div>
     </div>
-    
+    <br>
+    <br>
+    <div class="bg-shining pad_xs_m_y" style="border-bottom:1px solid #eaeaea;">
+        <div class="container" style="background-color:#af924f;">
+            <a href="peninsula-opening" class="link_black link_noline block_xs">半島酒店醫美會所尊享</a>
+        </div>
+    </div>
+    <br>
+    <br><br>
+    <br>
 </body>
 </html>
